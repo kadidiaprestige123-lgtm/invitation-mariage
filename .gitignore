@@ -1,0 +1,18 @@
+# Fichiers système & OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Serveur local de développement
+server.js
+
+# Dépendances et logs
+node_modules/
+*.log
+npm-debug.log*
+
+# Fichiers temporaires et tests
+*.png
+temp-*
+test-*
+

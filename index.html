@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Mariage d'Abdoul Aziz & Kadidiata — 20 Décembre 2026</title>
+  <meta name="description" content="Nous avons la joie de vous inviter au mariage d'Abdoul Aziz Traoré & Kadidiata Sogoré le 20 décembre 2026 à Lafiabougou, Bamako.">
+  <meta name="theme-color" content="#FAF7F2">
+
+  <!-- Balises Open Graph / WhatsApp / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mariage d'Abdoul Aziz Traoré & Kadidiata Sogoré">
+  <meta property="og:description" content="« Et parmi Ses signes, Il a créé pour vous des épouses parmi vous, afin que vous trouviez auprès d'elles tranquillité... » Rejoignez-nous le 20 décembre 2026 à Bamako.">
+  <meta property="og:image" content="photos/couple.jpg">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mariage d'Abdoul Aziz & Kadidiata">
+  <meta name="twitter:description" content="Invitation officielle au mariage d'Abdoul Aziz Traoré & Kadidiata Sogoré le 20 décembre 2026 à Bamako.">
+  <meta name="twitter:image" content="photos/couple.jpg">
+
+  <!-- Google Fonts préchargées avec display=swap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;1,6..96,400&family=Cinzel:wght@400;500;600;700&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+  <!-- Feuilles de style -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================================================================= -->
+  <!-- 0. ÉCRAN D'OUVERTURE : L'ENVELOPPE ROYALE                          -->
+  <!-- ================================================================= -->
+  <div id="envelope-screen" class="envelope-overlay" role="dialog" aria-modal="true" aria-label="Invitation officielle de mariage">
+    <div class="envelope-ambient-bg"></div>
+
+    <div class="envelope-wrapper">
+      <div class="envelope-intro-text">
+        <span class="sub-intro">Une heureuse nouvelle pour vous</span>
+        <h1 class="envelope-names">Abdoul Aziz & Kadidiata</h1>
+        <p class="envelope-date-hint">20 . 12 . 2026 — Bamako</p>
+      </div>
+
+      <!-- Objet Enveloppe en 3D -->
+      <div class="envelope-container" id="envelopeContainer">
+        <!-- Rabat arrière de l'enveloppe -->
+        <div class="envelope-back"></div>
+
+        <!-- Carte qui va glisser hors de l'enveloppe -->
+        <div class="envelope-letter" id="envelopeLetter">
+          <div class="letter-gold-border">
+            <span class="letter-bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</span>
+            <div class="letter-monogram">A & K</div>
+            <p class="letter-preview-text">Nous avons la joie de vous inviter à notre mariage</p>
+            <span class="letter-date">20 Décembre 2026</span>
+          </div>
+        </div>
+
+        <!-- Poche avant de l'enveloppe -->
+        <div class="envelope-pocket"></div>
+
+        <!-- Rabat supérieur mobile -->
+        <div class="envelope-flap" id="envelopeFlap"></div>
+
+        <!-- Sceau de cire doré gravé A & K -->
+        <button id="openInvitationBtn" class="wax-seal" type="button" aria-label="Ouvrir notre invitation">
+          <span class="seal-inner">
+            <span class="seal-initials">A & K</span>
+          </span>
+          <span class="seal-ripple"></span>
+        </button>
+      </div>
+
+      <!-- Bouton d'action d'ouverture -->
+      <button id="openInvitationTextBtn" class="btn-open-invitation" type="button">
+        <span class="btn-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 8v13H3V8"></path>
+            <path d="M1 3h22l-11 9L1 3z"></path>
+          </svg>
+        </span>
+        <span class="btn-label">Ouvrir notre invitation</span>
+      </button>
+    </div>
+  </div>
+
+
+  <!-- ================================================================= -->
+  <!-- CONTENU PRINCIPAL DU SITE D'INVITATION                            -->
+  <!-- ================================================================= -->
+  <div id="main-content" class="main-content is-hidden">
+
+    <!-- Bouton discret pour revoir l'enveloppe -->
+    <button id="reopenEnvelopeBtn" class="reopen-envelope-btn" type="button" aria-label="Revoir l'enveloppe">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 8v13H3V8"></path>
+        <path d="M1 3h22l-11 9L1 3z"></path>
+      </svg>
+      <span>L'Enveloppe</span>
+    </button>
+
+    <!-- Grand cadre orné entourant le faire-part -->
+    <div class="page-frame-container">
+      <div class="royal-corner royal-corner-tl" aria-hidden="true"></div>
+      <div class="royal-corner royal-corner-tr" aria-hidden="true"></div>
+      <div class="royal-corner royal-corner-bl" aria-hidden="true"></div>
+      <div class="royal-corner royal-corner-br" aria-hidden="true"></div>
+      
+      <!-- Bordure dorée filigrane -->
+      <div class="royal-border" aria-hidden="true"></div>
+
+      <!-- ============================================================= -->
+      <!-- SECTION 1 : ACCUEIL                                           -->
+      <!-- ============================================================= -->
+      <header class="section section-hero" id="accueil">
+        
+        <!-- Bismillah calligraphique décoratif -->
+        <div class="bismillah-header reveal-item" aria-label="Au nom d'Allah, le Tout Miséricordieux, le Très Miséricordieux">
+          <span class="arabic-calligraphy">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</span>
+        </div>
+
+        <!-- Verset Ar-Roum 30:21 -->
+        <blockquote class="quran-verse reveal-item">
+          <span class="ornament-quote">❝</span>
+          <p id="verseText" class="verse-content"></p>
+          <cite id="verseRef" class="verse-reference"></cite>
+        </blockquote>
+
+        <!-- Séparateur doré fin -->
+        <div class="gold-divider reveal-item" aria-hidden="true">
+          <span class="divider-line"></span>
+          <span class="divider-diamond">◆</span>
+          <span class="divider-line"></span>
+        </div>
+
+        <!-- Médaillon photo du couple -->
+        <div class="couple-medallion-wrapper reveal-item">
+          <div class="medallion-ring-outer"></div>
+          <div class="medallion-ring-inner">
+            <img id="couplePhoto" src="photos/couple.jpg" alt="Abdoul Aziz et Kadidiata" class="medallion-photo" loading="eager" width="260" height="260">
+          </div>
+          <!-- Ornement floral en bas du médaillon -->
+          <div class="medallion-flower" aria-hidden="true">
+            <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
+              <path d="M20 2C15 9 5 12 0 12C5 12 15 15 20 22C25 15 35 12 40 12C35 12 25 9 20 2Z" fill="#C9A227" opacity="0.85"/>
+              <circle cx="20" cy="12" r="3" fill="#DFB73D"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Phrase d'invitation -->
+        <p id="invitationPhrase" class="invitation-intro reveal-item"></p>
+
+        <!-- Prénoms des mariés en grand format manuscrit -->
+        <div class="names-block reveal-item">
+          <h2 class="groom-name" id="groomName">Abdoul Aziz</h2>
+          <div class="names-ampersand-wrapper">
+            <span class="ampersand-flourish-left"></span>
+            <span class="names-ampersand">&</span>
+            <span class="ampersand-flourish-right"></span>
+          </div>
+          <h2 class="bride-name" id="brideName">Kadidiata</h2>
+        </div>
+
+        <!-- Illustration vectorielle de deux alliances dorées entrelacées -->
+        <div class="wedding-rings-illustration reveal-item" aria-hidden="true">
+          <svg width="90" height="50" viewBox="0 0 90 50" fill="none" class="rings-svg">
+            <defs>
+              <linearGradient id="goldGradientRing" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#E5C768" />
+                <stop offset="45%" stop-color="#C9A227" />
+                <stop offset="100%" stop-color="#8F6E12" />
+              </linearGradient>
+            </defs>
+            <!-- Anneau 1 (Gauche) -->
+            <ellipse cx="33" cy="25" rx="19" ry="19" stroke="url(#goldGradientRing)" stroke-width="3.5" />
+            <!-- Pierre brillante sur l'anneau 1 -->
+            <polygon points="33,3 36,6 33,9 30,6" fill="#FFF8DE" stroke="#C9A227" stroke-width="0.8" />
+            <!-- Anneau 2 (Droite, entrelacé) -->
+            <ellipse cx="57" cy="25" rx="19" ry="19" stroke="url(#goldGradientRing)" stroke-width="3.5" />
+            <path d="M43 14 C48 18 50 22 50 25 C50 28 48 32 43 36" stroke="url(#goldGradientRing)" stroke-width="3.5" stroke-linecap="round" />
+          </svg>
+        </div>
+
+        <!-- Date & Heure mises en valeur -->
+        <div class="date-badge reveal-item">
+          <span class="date-badge-day" id="eventDateFormatted">Dimanche 20 Décembre 2026</span>
+          <span class="date-badge-time" id="eventTimeFormatted">à 09h00</span>
+          <span class="date-badge-city" id="eventCityFormatted">Lafiabougou, Bamako, Mali</span>
+        </div>
+
+        <!-- Compte à rebours élégant -->
+        <div class="countdown-section reveal-item" id="countdownWrapper">
+          <h3 class="countdown-heading">Le grand jour dans</h3>
+          <div class="countdown-grid" role="timer" aria-live="off">
+            <div class="countdown-unit">
+              <span class="countdown-value" id="cdDays">00</span>
+              <span class="countdown-label">Jours</span>
+            </div>
+            <span class="countdown-separator">:</span>
+            <div class="countdown-unit">
+              <span class="countdown-value" id="cdHours">00</span>
+              <span class="countdown-label">Heures</span>
+            </div>
+            <span class="countdown-separator">:</span>
+            <div class="countdown-unit">
+              <span class="countdown-value" id="cdMinutes">00</span>
+              <span class="countdown-label">Minutes</span>
+            </div>
+            <span class="countdown-separator">:</span>
+            <div class="countdown-unit">
+              <span class="countdown-value" id="cdSeconds">00</span>
+              <span class="countdown-label">Secondes</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bouton Ajouter au calendrier -->
+        <div class="calendar-action reveal-item">
+          <button id="addToCalendarBtn" class="btn-calendar" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+              <line x1="12" y1="14" x2="12" y2="18"></line>
+              <line x1="10" y1="16" x2="14" y2="16"></line>
+            </svg>
+            <span>Ajouter à mon calendrier</span>
+          </button>
+        </div>
+
+      </header>
+
+
+      <!-- ============================================================= -->
+      <!-- SECTION 2 : NOTRE HISTOIRE                                    -->
+      <!-- ============================================================= -->
+      <section class="section section-story" id="histoire">
+        <div class="section-title-wrapper reveal-item">
+          <span class="section-subtitle">Notre Chemin d'Amour</span>
+          <h2 class="section-title">Notre Histoire</h2>
+          <div class="section-title-ornament" aria-hidden="true">❦</div>
+        </div>
+
+        <div class="story-timeline" id="storyTimeline">
+          <!-- Les étapes de la frise sont générées via script.js -->
+        </div>
+      </section>
+
+
+      <!-- ============================================================= -->
+      <!-- SECTION 3 : GALERIE DE PHOTOS                                 -->
+      <!-- ============================================================= -->
+      <section class="section section-gallery" id="galerie">
+        <div class="section-title-wrapper reveal-item">
+          <span class="section-subtitle">Nos Instants Précieux</span>
+          <h2 class="section-title">Galerie</h2>
+          <div class="section-title-ornament" aria-hidden="true">❦</div>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- Les photos de la galerie sont insérées ici dynamiquement -->
+        </div>
+      </section>
+
+
+      <!-- ============================================================= -->
+      <!-- SECTION 4 : LE PROGRAMME                                      -->
+      <!-- ============================================================= -->
+      <section class="section section-program" id="programme">
+        <div class="section-title-wrapper reveal-item">
+          <span class="section-subtitle">Déroulement de la journée</span>
+          <h2 class="section-title">Le Programme</h2>
+          <div class="section-title-ornament" aria-hidden="true">❦</div>
+        </div>
+
+        <div class="program-container" id="programList">
+          <!-- Les créneaux du programme sont injectés depuis CONFIG -->
+        </div>
+      </section>
+
+
+      <!-- ============================================================= -->
+      <!-- SECTION 5 : LE LIEU & ITINÉRAIRE                              -->
+      <!-- ============================================================= -->
+      <section class="section section-location" id="lieu">
+        <div class="section-title-wrapper reveal-item">
+          <span class="section-subtitle">Où nous retrouver</span>
+          <h2 class="section-title">Le Lieu</h2>
+          <div class="section-title-ornament" aria-hidden="true">❦</div>
+        </div>
+
+        <div class="location-card reveal-item">
+          <div class="location-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          
+          <h3 class="location-place-name" id="locationTitle">Lafiabougou, Bamako</h3>
+          <p class="location-description" id="locationSubtitle">Célébration dans les familles respectives des mariés</p>
+
+          <!-- Bouton direct pour ouvrir Google Maps dans un nouvel onglet -->
+          <div class="location-action">
+            <a id="mapsButton" href="https://maps.app.goo.gl/E4fRV92Nnu2j5933A" target="_blank" rel="noopener noreferrer" class="btn-maps">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon>
+                <line x1="9" y1="3" x2="9" y2="18"></line>
+                <line x1="15" y1="6" x2="15" y2="21"></line>
+              </svg>
+              <span>Ouvrir l'itinéraire Google Maps</span>
+            </a>
+          </div>
+
+          <!-- Blocs Famille Traoré et Famille Sogoré (optionnels) -->
+          <div class="families-wrapper" id="familiesContainer">
+            <!-- Famille Traoré -->
+            <div class="family-card" id="cardFamilyTraore">
+              <div class="family-badge">Côté Marié</div>
+              <h4 class="family-name" id="family1Name">Famille Traoré</h4>
+              <p class="family-address" id="family1Address">Lafiabougou, Bamako</p>
+              <p class="family-landmark" id="family1Landmark">Repère : Non loin de la mosquée de Lafiabougou</p>
+            </div>
+
+            <!-- Famille Sogoré -->
+            <div class="family-card" id="cardFamilySogore">
+              <div class="family-badge">Côté Mariée</div>
+              <h4 class="family-name" id="family2Name">Famille Sogoré</h4>
+              <p class="family-address" id="family2Address">Lafiabougou, Bamako</p>
+              <p class="family-landmark" id="family2Landmark">Repère : Côté marché de Lafiabougou</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ============================================================= -->
+      <!-- SECTION 6 : DRESS CODE / TENUE                                -->
+      <!-- ============================================================= -->
+      <section class="section section-dresscode" id="tenue">
+        <div class="section-title-wrapper reveal-item">
+          <span class="section-subtitle">Harmonie & Élégance</span>
+          <h2 class="section-title">Tenue & Dress Code</h2>
+          <div class="section-title-ornament" aria-hidden="true">❦</div>
+        </div>
+
+        <div class="dresscode-card reveal-item">
+          <p class="dresscode-instruction" id="dresscodeInstruction">
+            Pour célébrer ce moment en harmonie, nous vous invitons à vous parer de vos plus beaux habits traditionnels ou de soirée dans ces teintes :
+          </p>
+
+          <!-- Les 3 pastilles de couleurs -->
+          <div class="color-palette" id="colorPalette">
+            <!-- Injecté par script.js -->
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ============================================================= -->
+      <!-- SECTION 7 : CONFIRMER MA PRÉSENCE (RSVP)                      -->
+      <!-- ============================================================= -->
+      <section class="section section-rsvp" id="confirmation">
+        <div class="section-title-wrapper reveal-item">
+          <span class="section-subtitle">Votre présence nous honore</span>
+          <h2 class="section-title">Confirmer ma Présence</h2>
+          <div class="section-title-ornament" aria-hidden="true">❦</div>
+        </div>
+
+        <div class="rsvp-card reveal-item">
+          <p class="rsvp-message">
+            Afin de nous permettre de vous accueillir dans les meilleures conditions, merci de bien vouloir nous faire part de votre présence.
+          </p>
+
+          <!-- Date limite optionnelle -->
+          <div class="rsvp-deadline-box" id="rsvpDeadlineContainer">
+            <span class="deadline-icon" aria-hidden="true">⏳</span>
+            <span class="deadline-text">Réponse souhaitée avant le <strong id="rsvpDeadlineText">10 décembre 2026</strong></span>
+          </div>
+
+          <!-- Boutons de contact : WhatsApp & Appel téléphonique direct -->
+          <div class="rsvp-buttons-group">
+            <!-- Bouton WhatsApp -->
+            <a id="whatsappButton" href="#" target="_blank" rel="noopener noreferrer" class="btn-rsvp-whatsapp">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.031 2C6.505 2 2.012 6.48 2.012 11.992c0 1.764.463 3.488 1.344 5.01L2 22l5.138-1.342c1.472.802 3.129 1.226 4.887 1.226 5.524 0 10.016-4.481 10.016-9.992 0-5.513-4.492-9.992-10.01-9.992zm5.82 14.129c-.244.685-1.42 1.309-1.97 1.391-.508.077-1.168.109-3.791-.98-3.345-1.39-5.508-4.793-5.677-5.016-.164-.225-1.354-1.802-1.354-3.437 0-1.636.857-2.44 1.162-2.775.305-.336.666-.42.888-.42.221 0 .443.003.637.012.205.01.48-.078.751.572.277.666.944 2.308 1.026 2.476.083.167.139.363.028.586-.111.224-.167.363-.333.559-.167.195-.351.436-.502.585-.167.167-.34.348-.146.68.194.333.864 1.424 1.854 2.306 1.272 1.134 2.345 1.485 2.678 1.651.333.167.527.139.722-.083.195-.223.832-.973 1.054-1.307.222-.334.444-.278.75-.167.305.111 1.943.916 2.276 1.083.333.167.555.25.638.389.083.139.083.805-.161 1.49z"/>
+              </svg>
+              <span>Confirmer par WhatsApp</span>
+            </a>
+
+            <!-- Bouton Appel téléphonique direct -->
+            <a id="callButton" href="tel:+22391063883" class="btn-rsvp-call">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span id="callButtonLabel">Appeler</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ============================================================= -->
+      <!-- SECTION 8 : PIED DE PAGE                                      -->
+      <!-- ============================================================= -->
+      <footer class="section section-footer" id="pied-de-page">
+        <!-- Formule de bénédiction finale -->
+        <blockquote class="footer-blessing reveal-item">
+          <p id="closingFormula" class="blessing-text">
+            « Qu'Allah bénisse notre union et fasse de notre foyer un havre de paix et de bonheur. »
+          </p>
+        </blockquote>
+
+        <p class="footer-thanks reveal-item">
+          Merci de faire partie de notre histoire
+        </p>
+
+        <!-- Initiales & Monogramme -->
+        <div class="footer-monogram reveal-item">
+          <span class="mono-letter">A</span>
+          <span class="mono-amp">&</span>
+          <span class="mono-letter">K</span>
+        </div>
+
+        <!-- Hashtag optionnel -->
+        <div class="footer-hashtag reveal-item" id="footerHashtagWrapper">
+          <span class="hashtag-label">Partagez vos souvenirs avec le hashtag</span>
+          <a href="#" id="footerHashtagLink" class="hashtag-link">#AzizEtKadidiata2026</a>
+        </div>
+
+        <div class="footer-copyright reveal-item">
+          <p>Avec amour & respect — Abdoul Aziz & Kadidiata</p>
+          <p class="footer-date-reminder">20 Décembre 2026 • Lafiabougou, Bamako</p>
+        </div>
+      </footer>
+
+    </div><!-- /.page-frame-container -->
+  </div><!-- /#main-content -->
+
+
+  <!-- ================================================================= -->
+  <!-- MODALE LIGHTBOX POUR LA GALERIE                                   -->
+  <!-- ================================================================= -->
+  <div id="lightboxModal" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Visualisation de la photo" hidden>
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-content">
+      <button id="lightboxCloseBtn" class="lightbox-close" type="button" aria-label="Fermer la vue agrandie">✕</button>
+      <img id="lightboxImg" src="" alt="Photo agrandie" class="lightbox-image">
+      <p id="lightboxCaption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
+
+  <!-- Script JS principal -->
+  <script src="script.js"></script>
+</body>
+</html>
+
